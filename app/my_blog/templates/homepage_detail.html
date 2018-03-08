@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}{{ question_detail.title }}{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/detail.css') }}">
+{% endblock %}
+{% block main %}
+    <h3 class="detail">{{ question_detail.title }}
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+        <li class="dropdown-header">修改文章</li>
+        <li class="dropdown-header">删除文章</li>
+
+        </ul>
+    </h3>
+    <p class="detail_info">
+        <span class="detail_author">作者：{{ question_detail.author.nickname }}</span>
+        <span class="detail_time">时间：{{ question_detail.create_time }}</span>
+    </p>
+    <hr>
+    <p class="detail_content">
+        {{ question_detail.content | safe }}
+    </p>
+    <hr>
+    <h3>评论（{{ floor }}）：</h3>
+    <form action="{{ url_for('answer') }}" method="post">
+        <div class="form-group">
+            <input type="text" name="clear" style="position:fixed;bottom:-9999px;">
+            <input name="detail_answer" type="text" class="form-control" placeholder="请输入评论" autocomplete="off">
+            <input type="hidden" name="question_id" value="{{ question_detail.id }}">
+        </div>
+        <div class="form-group" style="text-align: right">
+            <button class="btn btn-primary">立即评论</button>
+        </div>
+    </form>
+    <hr>
+    <div class="answer_lists">
+{#        question_detail.answer#}
+        {% for answer in paginations_answer.items %}
+            <div class="answer_list">
+                <div class="avatar">
+                    <img src="{{ url_for('static',filename = 'images/mly.png') }}" alt="">
+                </div>
+                <div class="answer_list_right">
+                    <div class="answer_list_info">
+                        <span class="floor">{{ dict_paginations[answer] }}楼</span>
+                        <span class="user_nickname">{{ answer.user_answer.nickname }}</span>
+                        <span class="create_time">{{ answer.answer_time }}</span>
+                    </div>
+                    <p class="answer_list_content">{{ answer.content }}</p>
+                </div>
+                <div class="bottom_control"><div class="bottom_control_line"></div></div>
+            </div>
+        {% endfor %}
+
+{#{% if pages_number_list %}#}
+{##}
+{#<nav aria-label="Page navigation">#}
+{#    <ul class="pagination">#}
+{#        <li>#}
+{#            <a href="{{ url_for('detail1',question_id = question_detail.id, page_id = 1) }}" aria-label="Previous">#}
+{#                <span aria-hidden="true">&laquo;</span>#}
+{#            </a>#}
+{#        </li>#}
+{#            {% for page_id in pages_number_list  %}#}
+{#            <li class="for_detail"><a href="{{ url_for('detail1',question_id = question_detail.id, page_id = page_id) }}">{{ page_id }}</a></li>#}
+{#            {% endfor %}#}
+{#        <li>#}
+{#            <a href="{{ url_for('detail1',question_id = question_detail.id, page_id = pages_number_list[-1]) }}" aria-label="Next">#}
+{#            <span aria-hidden="true">&raquo;</span>#}
+{#            </a>#}
+{#        </li>#}
+{#     </ul>#}
+{#</nav>#}
+{##}
+{#{% endif %}#}
+
+    </div>
+
+{% endblock %}

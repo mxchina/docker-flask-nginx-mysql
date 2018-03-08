@@ -1,0 +1,80 @@
+/** {*/
+    /*margin: 0px;*/
+    /*padding: 0px;*/
+/*}*/
+
+.detail{
+    text-align: center;
+}
+
+.detail_info{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.detail_author{
+    margin-right: 20px;
+}
+
+.detail_content{
+    text-indent: 2ch;
+}
+
+.answer_lists{
+        /*position: relative;*/
+        /*width: 100%;*/
+        /*height: auto;*/
+        /*margin: 4px auto;*/
+        /*border-bottom: 1px #ddd solid;*/
+        /*color: #333;*/
+        /*text-align: left;*/
+}
+
+.answer_list{
+    width: 980px;
+}
+
+.avatar img{
+    width: 55px;
+    height: 55px;
+
+}
+.avatar{
+    width: 60px;
+    /*height: 60px;*/
+    float: left;
+}
+
+.answer_list_right{
+    width: 910px;
+    /*height: 60px;*/
+    float: right;
+}
+
+.answer_list_info{
+    color: #9b9b9b;
+}
+
+.create_time{
+    float: right;
+}
+
+.answer_list_content{
+    margin-top: 20px;
+    font-size: larger;
+}
+
+.bottom_control{
+    width: 980px;
+    height: 1px;
+    float: right;
+    margin: 15px 0px;
+}
+
+.bottom_control_line{
+    padding: 0;
+    margin: 0;
+    height: 1px;
+    border-bottom: 1px solid #eee;
+
+}

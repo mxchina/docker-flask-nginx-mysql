@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}个人中心{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+
+{% endblock %}
+
+{% block homepage %}
+    <ul class="dropdown-menu">
+        <li><a href="#">显示文章详情</a></li>
+        <li><a href="#">显示文章标题列表</a></li>
+    </ul>
+{% endblock %}
+
+{% block main %}
+    <h3 class="denglu_zhuche">我的文章列表</h3>
+    <ul>
+        {% for question in questions %}
+            <li>
+{#                <div class="img_group">#}
+{#                    <img class="img" src="{{  url_for('static', filename = 'images/mly.png') }}" alt="">#}
+{#                </div>#}
+                <div class="question_group" style="margin: 0px 0px 5px 10px ">
+                    <p class="question_titile">
+                    <h5>
+                    <span style="margin-right: 30px">{{ user_nikename }}</span>
+                    <span>{{ question.create_time }}</span>
+                    </h5>
+
+                    <a href="{{ url_for('detail1',question_id=question.id) }}">
+			<script>
+                                function foo(){
+                                    if(confirm("确认删除吗？")){
+                                        return true;
+                                    }
+                                    return false;
+                                 }  
+                        </script>
+                        {% if question.title %}
+                            {{ question.title }}
+                            <div class="delete_edit">
+                            <span class="delete"><a href="{{ url_for('delete_question',question_id=question.id) }}" onclick="return foo();">删除</a></span>
+                            <span class="edit"><a href="{{ url_for('edit_question',edit_question_id=question.id) }}">修改</a></span>
+                            </div>
+                            {% else %}
+                            无标题
+                            <div class="delete_edit">
+                            <span class="delete"><a href="{{ url_for('delete_question',question_id=question.id) }}" onclick="return foo();">删除</a></span>
+                            <span class="edit"><a href="{{ url_for('edit_question',edit_question_id=question.id) }}">修改</a></span>
+                            </div>
+                        {% endif %}
+
+
+                    </a>
+                    </p>
+{#                    <p class="question_content">{{ question.content }}</p>#}
+{#                    <div class="question_info">#}
+{#                        <span class="question_author">{{ question.author.nickname }}</span>#}
+{#                        <span class="question_time">{{ question.create_time }}</span>#}
+{#                    </div>#}
+                </div>
+            </li>
+        {% endfor %}
+        {% if pages_number_list %}
+            {% import "_macros.html" as macros %}
+            {{ macros.pagination_widget(pages_number_list) }}
+        {% endif %}
+
+    </ul>
+
+{% endblock %}
+

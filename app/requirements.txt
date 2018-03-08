@@ -1,0 +1,8 @@
+Flask
+Flask-Migrate
+Flask-Script
+Flask-SQLAlchemy
+PyMySQL
+setuptools
+SQLAlchemy
+uWSGI
