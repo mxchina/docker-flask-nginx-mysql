@@ -5,4 +5,4 @@ Flask-SQLAlchemy
 PyMySQL
 setuptools
 SQLAlchemy
-uWSGI
+uwsgi
