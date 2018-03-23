@@ -1,0 +1,17 @@
+2018/03/09 04:10:25 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:10:25 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:10:26 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:10:27 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:10:28 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:10:30 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:10:33 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:10:40 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:15:55 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:15:56 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:15:56 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:15:57 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:15:58 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:16:00 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:16:04 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/09 04:16:11 [emerg] 1#1: host not found in upstream "myproject_flask-uwsgi_1" in /etc/nginx/conf.d/uwsgi_flask.conf:7
+2018/03/20 13:49:35 [error] 5#5: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.16.10.123, server: flask-uwsgi, request: "POST /zabbix/jsrpc.php?output=json-rpc HTTP/1.1", upstream: "uwsgi://172.19.0.3:5000", host: "172.16.10.88", referrer: "http://172.16.10.88/zabbix/profile.php"
