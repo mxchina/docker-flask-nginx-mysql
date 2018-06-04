@@ -3,7 +3,7 @@
 # Author: mx
 
 #基础镜像使用官方mysql
-FROM mysql
+FROM mysql:5.7
 
 #作者
 MAINTAINER mx <274819450@qq.com>
